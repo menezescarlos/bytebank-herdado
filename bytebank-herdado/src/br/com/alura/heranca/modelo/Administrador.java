@@ -1,11 +1,12 @@
 package br.com.alura.heranca.modelo;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
 	private int senha;
 	
+	@Override
 	public double getBonificacao() {
-		return super.getBonificacao() + super.getSalario();
-
+		// TODO Auto-generated method stub
+		return super.getBonificacao();
 	}
 	
 	@Override
@@ -21,6 +22,5 @@ public class Gerente extends Funcionario implements Autenticavel {
 			return false;
 		}
 	}
-	
 	
 }
