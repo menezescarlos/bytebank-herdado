@@ -30,6 +30,6 @@ public class Depuração {
 		
 		
 		
-		System.out.println("Fim do metodo2");
+		//System.out.println("Fim do metodo2");
 	}
 }
