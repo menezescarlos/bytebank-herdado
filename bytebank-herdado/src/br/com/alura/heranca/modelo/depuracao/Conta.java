@@ -15,18 +15,18 @@ public class Conta {
 	}
 
 	public void saca(double valor) throws SaldoInsuficienteException {
-		if (saldo >= valor) {
+		if (this.saldo <= valor) {
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
         }  this.saldo -= valor;
 	}
 
 	public void deposita(double valor) {
-		
+		this.saldo += valor;
 	}
 
 	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
 		 this.saca(valor);
-		    destino.deposita(valor);
+		 destino.deposita(valor);
 	}
 
 	public double getSaldo() {

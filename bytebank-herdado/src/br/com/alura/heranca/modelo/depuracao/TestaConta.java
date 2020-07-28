@@ -7,7 +7,7 @@ public class TestaConta {
 	 * @param args
 	 */
 	public static void main(String[] args) throws SaldoInsuficienteException {
-		// Conta contaComum = new Conta(123, 111, 100.0);
+		Conta contaComum = new Conta(123, 111, 100.0);
 		ContaCorrente cc = new ContaCorrente(124, 222, 200.0);
 		ContaPoupanca cp = new ContaPoupanca(125, 333, 300.0);
 
