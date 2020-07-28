@@ -1,5 +1,60 @@
 package br.com.alura.heranca.modelo.depuracao;
 
+import br.com.alura.heranca.modelo.Cliente;
+
 public class Conta {
-	void deposita() {}
+	protected double saldo;
+	private int agencia;
+	private int numero;
+	protected Cliente titular;
+
+	public Conta(int agencia, int numero, double saldo) {
+		this.setAgencia(agencia);
+		this.setNumero(numero);
+		this.deposita(saldo);
+	}
+
+	public void saca(double valor) throws SaldoInsuficienteException {
+		if (saldo >= valor) {
+			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
+        }  this.saldo -= valor;
+	}
+
+	public void deposita(double valor) {
+		
+	}
+
+	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
+		 this.saca(valor);
+		    destino.deposita(valor);
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public Cliente getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+
 }

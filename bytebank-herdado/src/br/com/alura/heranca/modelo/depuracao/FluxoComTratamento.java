@@ -31,7 +31,7 @@ public class FluxoComTratamento {
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
 			Conta c = null;
-			c.deposita();
+			c.deposita(i);
 			// try {
 			//int a = i / 0;
 			/*
