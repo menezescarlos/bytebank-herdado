@@ -3,7 +3,7 @@ package br.com.alura.heranca.modelo.depuracao;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Teste {
+public class TesteObject {
 	
 	public static void main(String[] args) {
 		Date a = new Date();
