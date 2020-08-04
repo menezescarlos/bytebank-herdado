@@ -1,11 +1,14 @@
 package br.com.alura.heranca.modelo.depuracao;
 
-import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Vector;
 
 public class TesteArrayList {
 
 	public static void main(String[] args) {
-        ArrayList lista = new ArrayList();
+        //ArrayList lista = new ArrayList();
+		//List<Conta> lista = new Vector<>();
+		Collection<Conta> lista = new Vector<>();
 
         Conta cc = new ContaCorrente(22, 11, 600.0);
         lista.add(cc);
@@ -15,7 +18,7 @@ public class TesteArrayList {
 
         System.out.println("Tamanho: " + lista.size());
 
-        Conta ref = (Conta) lista.get(0);
+        Conta ref = (Conta) ((Vector<Conta>) lista).get(0);
         System.out.println(ref.getNumero());
 
         lista.remove(0);
@@ -30,7 +33,7 @@ public class TesteArrayList {
         // A corrigir depois.
 
         for(int i = 0; i < lista.size(); i++) {
-            Object oRef = lista.get(i);
+            Object oRef = ((Vector<Conta>) lista).get(i);
             System.out.println(oRef);
         }
 

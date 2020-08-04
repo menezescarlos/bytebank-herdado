@@ -57,4 +57,32 @@ public class Conta {
 		this.titular = titular;
 	}
 
+//	public boolean ehIgual(Conta outra) {
+//	    if(this.agencia != outra.agencia){
+//	        return false;
+//	    }
+//
+//	    if(this.numero != outra.numero){
+//	        return false;
+//	    }
+//
+//	    return true;
+//	}
+	
+	@Override
+	public boolean equals(Object ref){
+
+	    Conta outra = (Conta) ref;
+
+	    if(this.agencia != outra.agencia){
+	        return false;
+	    }
+
+	    if(this.numero != outra.numero){
+	        return false;
+	    }
+
+	    return true;
+	}
+
 }
