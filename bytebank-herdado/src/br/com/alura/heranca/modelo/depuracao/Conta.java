@@ -13,6 +13,11 @@ public class Conta {
 		this.setNumero(numero);
 		this.deposita(saldo);
 	}
+	
+	public Conta(int agencia, int numero) {
+		this.setAgencia(agencia);
+		this.setNumero(numero);
+	}
 
 	public void saca(double valor) throws SaldoInsuficienteException {
 		if (this.saldo <= valor) {
