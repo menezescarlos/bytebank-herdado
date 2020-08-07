@@ -21,7 +21,7 @@ public class TesteEscritaPrintStreamPrintWriter {
 		
 		//PrintStream ps = new PrintStream("lorem2.txt");
 		
-		PrintWriter pw = new PrintWriter("lorem2.txt");
+		PrintWriter pw = new PrintWriter("lorem2.txt", "UTF-8");
 
 		
 		pw.println("Carlos Menezes de Oliveira");
